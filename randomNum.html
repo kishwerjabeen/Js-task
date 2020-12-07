@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number</title>
+</head>
+<body>
+    <div id="output"></div>
+    <input type="button" onclick="myFun()" value="Click Me ">
+
+    <script>
+        var output = document.getElementById("output");
+        var adj = ["super","wonderful","bad","angry","careful"];
+
+        function myFun() {
+            var question = prompt("what is your name?");
+            
+            // output.innerHTML+=question +"<br/>"; // ya check karny kay liay 
+            var nameAdj = Math.floor(Math.random()*adj.length);
+            output.innerHTML += adj[nameAdj] + " " + question + "<br>";
+        }
+    </script>
+</body>
+</html>
